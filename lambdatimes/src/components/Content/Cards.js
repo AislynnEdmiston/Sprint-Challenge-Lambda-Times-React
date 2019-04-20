@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Cards = props => {
 
-  console.log(props, 'here')
+   console.log(props, 'here')
 
   return (
     <div className="cards-container">
