@@ -6,13 +6,14 @@ const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
-      const tabClass = props.selectedTab === props.tab ? 'tab topics active-tab' : 'tab';
+      const tabClass = props.selectedTab === props.tab ? 'tab active-tab' : 'tab';
       const tabHandler = () => {
-        this.changeSelected(props.tab);
+        props.changeSelected(props.tab);
         
         console.log(`My state: ${this.state}`)
         console.log("tab handler activated")
-      }
+      } 
+      console.log(props.selectedTab, props.tab, "This Now!")
   return (
     <div
       className={tabClass}
